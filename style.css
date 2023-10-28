@@ -1,0 +1,65 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    background-color: rgb(243, 226, 203);
+    font-family: sans-serif;
+}
+
+.center {
+    justify-content: center;
+    text-align: center;
+}
+
+.placar {
+    background-color: rgb(60, 60, 60);
+}
+
+.placar ul {
+    width: 25%;
+    margin: 1% 0%;
+}
+
+#cenario {
+    height: 70%;
+    width: 60%;
+    margin: 2% auto;
+    position: relative;
+    cursor: crosshair;
+    background-size: cover;
+    /*IMAGEM DO CENÁRIO AQUI*/
+    background-image: url(background.jpg);
+    background-repeat: no-repeat;
+    /*BORDA*/
+    border-radius: 4px;
+    border: 4px solid orange;
+}
+
+#alvo {
+    position: absolute;
+    width: 18%;
+}
+
+footer {
+    background-color: rgb(60, 60, 60);
+    position: relative;
+    padding: 2% 0;
+}
+
+footer .f ul {
+    width: 50%;
+}
+
+footer .f h3 {
+    margin-bottom: 12px;
+    font-weight: 600;
+    font-size: medium;
+}
+
+.padrao {
+    display: flex;
+    color: white;
+}
