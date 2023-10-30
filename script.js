@@ -7,6 +7,7 @@ const acertosElement = document.querySelector('#acertos');
 const errosElement = document.querySelector('#erros');
 const totalElement = document.querySelector('#total');
 const btnIniciar = document.querySelector('#controles_btn-iniciar');
+const tempoElement = document.querySelector("#tempo");
 
 /*
  * Variáveis para controlar os status
@@ -14,6 +15,7 @@ const btnIniciar = document.querySelector('#controles_btn-iniciar');
 let acertos = 0;
 let erros = 0;
 let total = 0;
+let interval = 0;
 
 btnIniciar.addEventListener("click", iniciarJogo);
 
@@ -22,10 +24,16 @@ function iniciarJogo() {
 
     cenarioElement.addEventListener("click", ouvinteClick);
 
-    setTimeout(pararJogo, 30000);
+    interval = setInterval(() => {
+        let valTempo = tempoElement.innerHTML;
+        --valTempo;
+        tempoElement.innerHTML = valTempo;
+    }, 1000);
+    setTimeout(pararJogo, 15000);
 }
 
 function pararJogo() {
+    clearInterval(interval);
     cenarioElement.removeEventListener("click", ouvinteClick);
 }
 
