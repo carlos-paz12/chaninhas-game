@@ -8,7 +8,7 @@
 }
 
 body {
-    cursor: url(hand-1.cur), auto;
+    cursor: url(../images/hand-1.cur), auto;
     height: 100vh;
 }
 
@@ -18,7 +18,7 @@ main {
     flex-direction: column;
     justify-content: space-between;
 
-    background-image: url(background.jpg);
+    background-image: url(../images/background.jpg);
     background-size: cover;
     background-repeat: no-repeat;
 
@@ -52,7 +52,7 @@ main {
 }
 
 #cenario {
-    cursor: url(hand-2.cur), auto;
+    cursor: url(../images/hand-2.cur), auto;
     margin: 2% auto;
     position: relative;
 
@@ -66,7 +66,7 @@ main {
 }
 
 #alvo:hover {
-    cursor: url(hand-3.cur), auto;
+    cursor: url(../images/hand-3.cur), auto;
 }
 
 #controles {

@@ -7,10 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <script src="script.js" defer></script>
-    <script src="navigation.js" defer></script>
+    <script src="assets/js/script.js" defer></script>
+    <script src="assets/js/navigation.js" defer></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/stylesheets/style.css">
     <title>Chaninhas Game | Game </title>
 </head>
 
@@ -38,7 +38,7 @@
         </header>
     
         <section id="cenario">
-            <img id="alvo" src="chaninha.png" alt="target" draggable="false">
+            <img id="alvo" src="assets/images/chaninha.png" alt="target" draggable="false">
         </section>
     
         <section id="controles">
