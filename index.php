@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="script.js" defer></script>
+    <script src="navigation.js" defer></script>
     <link rel="stylesheet" href="style.css">
     <title>Chaninhas Game | Game </title>
 </head>
@@ -40,7 +41,7 @@
     
         <section id="controles">
             <button id="btn-iniciar" class="btn">Iniciar</button>
-            <a href="ranking.html"><button id="btn-ranking" class="btn">Ranking</button></a>
+            <button id="btn-ranking" class="btn">Ranking</button>
         </section>
     </main>
 
