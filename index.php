@@ -53,7 +53,7 @@
                         <h5 class="modal-title" id="exampleModalLabel">Parabéns, jogador!</h5>
                     </div>
                     <div class="modal-body">
-                        <form action="#" method="post">
+                        <form action="database/ws/create_service.php" method="post">
                             <div class="form-group">
                                 <label for="modal-input-name" class="col-form-label">Informe seu nome:</label>
                                 <input type="text" class="form-control" id="modal-input-name" name="modal-input-nome">
