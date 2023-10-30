@@ -11,59 +11,61 @@
     <title>Chaninhas Game | Game </title>
 </head>
 
-<body class="container">
-    <header>
-        <div class="placar padrao center">
-            <ul>
-                <h3>ACERTOS</h3>
-                <p id="acertos">0</p>
+<body>
+    <main>
+        <header>
+            <ul id="placar">
+                <li>
+                    <span id="tempo" class="placar-value">15</span><br>
+                    <p class="placar-label">Segundos</p>
+                </li>
+                <li>
+                    <span id="acertos" class="placar-value">0</span><br>
+                    <p class="placar-label">Acertos</p>
+                </li>
+                <li>
+                    <span id="erros" class="placar-value">0</span><br>
+                    <p class="placar-label">Erros</p>
+                </li>
+                <li>
+                    <span id="total" class="placar-value">0</span><br>
+                    <p class="placar-label">Tiros</p>
+                </li>
             </ul>
-            <ul>
-                <h3>ERROS</h3>
-                <p id="erros">0</p>
-            </ul>
-            <ul>
-                <h3>TENTATIVAS</h3>
-                <p id="total">0</p>
-            </ul>
-        </div>
-    </header>
-
-    <div id="tempo-container">
-        <p><span id="tempo">15</span>s</p>
-    </div>
-
-    <div id="cenario" class="center">
-        <img id="alvo" src="chaninha.png" alt="target">
-    </div>
-
-    <div id="controles">
-        <button id="controles_btn-iniciar">Iniciar</button>
-        <a href="ranking.html"><button id="controles_btn-ranking">Ranking</button></a>
-    </div>
+        </header>
+    
+        <section id="cenario">
+            <img id="alvo" src="../assets/images/chaninha.png" alt="target" draggable="false">
+        </section>
+    
+        <section id="controles">
+            <button id="btn-iniciar" class="btn">Iniciar</button>
+            <a href="ranking.html"><button id="btn-ranking" class="btn">Ranking</button></a>
+        </section>
+    </main>
 
     <footer>
-        <div class="f center padrao">
-            <ul>
-                <h3>ATIVIDADE</h3>
-                <p>
+        <section>
+            <article>
+                <h3 class="footer-titulo">ATIVIDADE</h3>
+                <p class="footer-paragrafo">
                     Disciplina: Programação para Internet <br>
                     Professor: Marcelo Figueiredo Barbosa Junior <br>
-                    IFRN Campus Santa Cruz/RN
+                    IFRN <i>campus</i> Santa Cruz/RN
                 </p>
-            </ul>
-            <ul>
-                <h3>DESENVOLVIDO POR</h3>
-                <p>
+            </article>
+            <article>
+                <h3 class="footer-titulo">DESENVOLVIDO POR</h3>
+                <p class="footer-paragrafo">
                     José Carlos da Paz Silva <br>
                     Júlia Katllyn Ayres da Costa <br>
                     Welida Souza Silva
                 </p><br>
-            </ul>
-        </div>
-        <div class="f center padrao">
-            <p>Todos os direitos reservados ⓒ</p>
-        </div>
+            </article>
+        </section>
+        <section>
+            <p class="footer-paragrafo">Todos os direitos reservados ⓒ</p>
+        </section>
     </footer>
 </body>
 

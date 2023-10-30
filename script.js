@@ -5,7 +5,7 @@ $(document).ready(function () {
     const elementoQtdAcertos = $('#acertos');
     const elementoQtdErros = $('#erros');
     const elementoQtdTiros = $('#total');
-    const elementoBtnIniciar = $('#controles_btn-iniciar');
+    const elementoBtnIniciar = $('#btn-iniciar');
     const elementoTempo = $('#tempo');
 
     let qtdAcertos = 0;
