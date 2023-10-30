@@ -1,10 +1,11 @@
-const elementoBtnRanking = $('#btn-ranking');
-const elementoBtnHome = $('#btn-home');
+$(document).ready(() => {
 
-elementoBtnHome.on("click", function () {
-    window.location.href = 'index.php';
-});
+    $('#botoes_botao-ranking').on("click", () => {
+        window.location.href = 'ranking.php';
+    });
 
-elementoBtnRanking.on("click", function () {
-    window.location.href = 'ranking.php';
+    $('#cabecalho_botao-game').on("click", () => {
+        window.location.href = 'index.php';
+    });
+
 });
