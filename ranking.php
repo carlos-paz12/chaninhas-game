@@ -2,6 +2,8 @@
 <html lang="pt-br">
 
 <?php
+require_once "model/Partida.php";
+
 $caminhoBanco = "database/chaninhas_game_db.sqlite";
 $conexao = new PDO("sqlite:" . $caminhoBanco);
 $conexao->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_OBJ);
@@ -37,16 +39,16 @@ $conexao->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_OBJ);
             <tbody>
                 <?php
                 $consulta = $conexao->query("SELECT * FROM partidas ORDER BY qntdAcertos DESC, qntdErros ASC, dataehora DESC;");
-                $partidas = $consulta->fetchAll();
+                $partidas = $consulta->fetchAll(PDO::FETCH_CLASS, "Partida");
 
                 foreach ($partidas as $p) :
                 ?>
                     <tr>
                         <td><?= $p->id ?></td>
-                        <td><?= $p->nome ?></td>
-                        <td><?= $p->qntdAcertos ?></td>
-                        <td><?= $p->qntdErros ?></td>
-                        <td><?= $p->dataehora ?></td>
+                        <td><?= $p->getNome(); ?></td>
+                        <td><?= $p->getQntdAcertos(); ?></td>
+                        <td><?= $p->getQntdErros(); ?></td>
+                        <td><?= $p->getDataehora(); ?></td>
                     </tr>
                 <?php
                 endforeach;
