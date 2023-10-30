@@ -31,6 +31,7 @@ $(document).ready(function () {
 
     function pararJogo() {
         clearInterval(intervaloChecagemTempo);
+        exibirPopup();
         elementoCenario.off("click", ouvinteCliqueMouse);
     }
 
@@ -49,6 +50,12 @@ $(document).ready(function () {
         else {
             atualizarPlacar(false);
         }
+    }
+
+    function exibirPopup() {
+        $('#modal').modal('show');
+        $('#modal-input-qntd-acertos').val(qtdAcertos);
+        $('#modal-input-qntd-erros').val(qtdErros);
     }
 
     function alterarPosicaoAlvo() {
