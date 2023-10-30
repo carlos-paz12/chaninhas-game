@@ -45,6 +45,31 @@
             <button id="btn-iniciar" class="btn">Iniciar</button>
             <button id="btn-ranking" class="btn">Ranking</button>
         </section>
+
+        <div class="modal fade" id="modal" role="dialog" data-backdrop="static">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Parabéns, jogador!</h5>
+                    </div>
+                    <div class="modal-body">
+                        <form action="#" method="post">
+                            <div class="form-group">
+                                <label for="modal-input-name" class="col-form-label">Informe seu nome:</label>
+                                <input type="text" class="form-control" id="modal-input-name" name="modal-input-nome">
+                            </div>
+                            <div class="form-group">
+                                <input type="hidden" class="form-control" id="modal-input-qntd-acertos" name="modal-input-qntd-acertos">
+                                <input type="hidden" class="form-control" id="modal-input-qntd-erros" name="modal-input-qntd-erros">
+                            </div>
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-success">Salvar</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
 
     <footer>
