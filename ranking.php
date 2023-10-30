@@ -2,7 +2,7 @@
 <html lang="pt-br">
 
 <?php
-require_once "model/Partida.php";
+require_once "models/Partida.php";
 
 $caminhoBanco = "database/chaninhas_game_db.sqlite";
 $conexao = new PDO("sqlite:" . $caminhoBanco);
@@ -22,9 +22,8 @@ $conexao->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_OBJ);
 <body>
     <main>
         <header>
-            <button id="btn-home">
-                < Home</button>
-                    <h1 class="title">Ranking</h1>
+            <button id="btn-home">< Home</button>
+            <h1 class="title">Ranking</h1>
         </header>
         <table>
             <thead>
@@ -41,10 +40,11 @@ $conexao->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_OBJ);
                 $consulta = $conexao->query("SELECT * FROM partidas ORDER BY qntdAcertos DESC, qntdErros ASC, dataehora DESC;");
                 $partidas = $consulta->fetchAll(PDO::FETCH_CLASS, "Partida");
 
+                $posicao = 1;
                 foreach ($partidas as $p) :
                 ?>
                     <tr>
-                        <td><?= $p->id ?></td>
+                        <td><?= $posicao++ ?></td>
                         <td><?= $p->getNome(); ?></td>
                         <td><?= $p->getQntdAcertos(); ?></td>
                         <td><?= $p->getQntdErros(); ?></td>
