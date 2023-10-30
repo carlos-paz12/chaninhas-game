@@ -36,7 +36,7 @@ $conexao->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_OBJ);
             </thead>
             <tbody>
                 <?php
-                $consulta = $conexao->query("SELECT * FROM partidas;");
+                $consulta = $conexao->query("SELECT * FROM partidas ORDER BY qntdAcertos DESC, qntdErros ASC, dataehora DESC;");
                 $partidas = $consulta->fetchAll();
 
                 foreach ($partidas as $p) :
