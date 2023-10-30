@@ -12,6 +12,7 @@ $(document).ready(function () {
     let qtdErros = 0;
     let qtdTiros = 0;
     let intervaloChecagemTempo = 0;
+    let tempo = 15; /* Medido em segundos */
 
     elementoBtnIniciar.on("click", iniciarJogo);
 
@@ -21,12 +22,11 @@ $(document).ready(function () {
         elementoCenario.on("click", ouvinteCliqueMouse);
 
         intervaloChecagemTempo = setInterval(function () {
-            let tempo = parseInt(elementoTempo.text());
             tempo--;
             elementoTempo.text(tempo);
         }, 1000);
 
-        setTimeout(pararJogo, 15000);
+        setTimeout(pararJogo, tempo * 1000);
     }
 
     function pararJogo() {
