@@ -1,0 +1,162 @@
+@import "general.css";
+
+#jogo {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    height: 100vh;
+}
+
+#jogo_placar {
+    display: flex;
+    justify-content: space-evenly;
+
+    list-style-type: none;
+
+    gap: 2em;
+    width: 30vw;
+}
+
+.placar_status {
+    background-color: #1e2f44;
+    border-radius: .2em;
+    color: #ffffff;
+    text-align: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: left;
+
+    padding: .2vh 4vw;
+}
+
+.status_valor {
+    margin-left: .2em;
+}
+
+.material-symbols-outlined {
+    font-weight: 500;
+}
+
+#status_icon-tempo {
+    color: #ebd82f;
+}
+
+#status_icon-acertos {
+    color: #2feb48;
+}
+
+#status_icon-erros {
+    color: #eb2f2f;
+}
+
+#status_icon-total {
+    color: #872feb;
+}
+
+#jogo_cenario {
+    background-image: url(../images/background.jpg);
+    background-size: cover;
+    border-radius: .5em;
+    cursor: url(../images/hand-2.cur), auto;
+
+    position: relative;
+
+    height: 80vh;
+    width: 80vw;
+}
+
+#cenario_alvo {
+    position: absolute;
+    bottom: 0;
+    user-select: none;
+    width: 10vh;
+    height: 12vh;
+}
+
+#cenario_alvo:active {
+    cursor: url(../images/hand-3.cur), auto;
+}
+
+#jogo_botoes {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 1.5rem;
+    width: 10vw;
+}
+
+#botoes_botao-iniciar {
+    background-color: #2feb48;
+    box-shadow: 0px 4px #1d962d;
+    text-shadow: 1px 1px #1d962d;
+}
+
+#botoes_botao-ranking {
+    background-color: #872feb;
+    box-shadow: 0px 4px #511d96;
+    text-shadow: 1px 1px #511d96;
+}
+
+#botoes_botao-iniciar:hover,
+#botoes_botao-ranking:hover {
+    text-shadow: 0px 0px #1d962d;
+}
+
+#botoes_botao-iniciar:active {
+    top: 4px;
+    box-shadow: 0px 0px #1d962d;
+}
+
+#botoes_botao-ranking:active {
+    top: 4px;
+    box-shadow: 0px 0px #511d96;
+}
+
+#botoes_botao-iniciar:disabled {
+    background-color: #2feb4855;
+    box-shadow: 0px 4px #1d962d55;
+    text-shadow: 1px 1px #1d962d55;
+}
+
+#botoes_botao-ranking:disabled {
+    background-color: #872feb55;
+    box-shadow: 0px 4px #511d9655;
+    text-shadow: 1px 1px #511d9655;
+}
+
+#footer {
+    background-color: #354252;
+    color: #ffffff;
+
+    display: flex;
+    justify-content: center;
+
+    height: 25vh;
+
+    margin-top: 25em;
+}
+
+.footer_section {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-around;
+
+    width: 80vw;
+}
+
+.footer_article {
+    text-align: center;
+}
+
+.footer-titulo {
+    margin-bottom: .6em;
+}
+
+.footer-paragrafo {
+    color: #a5b8cf;
+    font-size: 1em;
+    line-height: 1.5em;
+}

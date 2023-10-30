@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    cursor: url(../images/hand-1.cur), auto;
+    background-color: #b9cee7;
+}
+
+.botao {
+    border: none;
+    border-radius: 2px;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 1.2em;
+    font-weight: bold;
+    padding: .2em 1em;
+    position: relative;
+}

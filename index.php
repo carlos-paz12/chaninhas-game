@@ -10,40 +10,42 @@
     <script src="assets/js/script.js" defer></script>
     <script src="assets/js/navigation.js" defer></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/stylesheets/style.css">
+    <link rel="stylesheet" href="assets/stylesheets/index.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,1,-25" />
     <title>Chaninhas Game | Game </title>
 </head>
 
 <body>
-    <main>
-        <header>
-            <ul id="placar">
-                <li>
-                    <span id="tempo" class="placar-value">15</span><br>
-                    <p class="placar-label">Segundos</p>
-                </li>
-                <li>
-                    <span id="acertos" class="placar-value">0</span><br>
-                    <p class="placar-label">Acertos</p>
-                </li>
-                <li>
-                    <span id="erros" class="placar-value">0</span><br>
-                    <p class="placar-label">Erros</p>
-                </li>
-                <li>
-                    <span id="total" class="placar-value">0</span><br>
-                    <p class="placar-label">Tiros</p>
-                </li>
-            </ul>
-        </header>
-    
-        <section id="cenario">
-            <img id="alvo" src="assets/images/chaninha.png" alt="target" draggable="false">
+    <main id="jogo">
+        <ul id="jogo_placar">
+            <li class="placar_status">
+                <span class="material-symbols-outlined" id="status_icon-tempo">schedule</span>
+                <span id="status_tempo" class="status_valor">20</span>
+            </li>
+
+            <li class="placar_status">
+                <span class="material-symbols-outlined" id="status_icon-acertos">done</span>
+                <span id="status_acertos" class="status_valor">0</span>
+            </li>
+
+            <li class="placar_status">
+                <span class="material-symbols-outlined" id="status_icon-erros">close</span>
+                <span id="status_erros" class="status_valor">0</span>
+            </li>
+
+            <li class="placar_status">
+                <span class="material-symbols-outlined" id="status_icon-total">emoji_flags</span>
+                <span id="status_tentativas" class="status_valor">0</span>
+            </li>
+        </ul>
+
+        <section id="jogo_cenario">
+            <img id="cenario_alvo" src="assets/images/chaninha.png" draggable="false">
         </section>
-    
-        <section id="controles">
-            <button id="btn-iniciar" class="btn">Iniciar</button>
-            <button id="btn-ranking" class="btn">Ranking</button>
+
+        <section id="jogo_botoes">
+            <button id="botoes_botao-iniciar" class="botao material-symbols-rounded">play_arrow</button>
+            <button id="botoes_botao-ranking" class="botao material-symbols-rounded">groups</button>
         </section>
 
         <div class="modal fade" id="modal" role="dialog" data-backdrop="static">
@@ -72,27 +74,27 @@
         </div>
     </main>
 
-    <footer>
-        <section>
-            <article>
-                <h3 class="footer-titulo">ATIVIDADE</h3>
+    <footer id="footer">
+        <section class="footer_section">
+            <article class="footer_article">
+                <h3 class="footer-titulo">Atividade</h3>
                 <p class="footer-paragrafo">
                     Disciplina: Programação para Internet <br>
                     Professor: Marcelo Figueiredo Barbosa Junior <br>
                     IFRN <i>campus</i> Santa Cruz/RN
                 </p>
             </article>
-            <article>
-                <h3 class="footer-titulo">DESENVOLVIDO POR</h3>
+            <article class="footer_article">
+                <p class="footer-paragrafo">Todos os direitos reservados ⓒ</p>
+            </article>
+            <article class="footer_article">
+                <h3 class="footer-titulo">Desenvolvido por</h3>
                 <p class="footer-paragrafo">
                     José Carlos da Paz Silva <br>
                     Júlia Katllyn Ayres da Costa <br>
                     Welida Souza Silva
-                </p><br>
+                </p>
             </article>
-        </section>
-        <section>
-            <p class="footer-paragrafo">Todos os direitos reservados ⓒ</p>
         </section>
     </footer>
 </body>
