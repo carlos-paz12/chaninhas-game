@@ -8,6 +8,7 @@
 }
 
 body {
+    cursor: url(hand-1.cur), auto;
     height: 100vh;
 }
 
@@ -51,7 +52,7 @@ main {
 }
 
 #cenario {
-    cursor: crosshair;
+    cursor: url(hand-2.cur), auto;
     margin: 2% auto;
     position: relative;
 
@@ -62,6 +63,10 @@ main {
 #alvo {
     position: absolute;
     width: 8rem;
+}
+
+#alvo:hover {
+    cursor: url(hand-3.cur), auto;
 }
 
 #controles {
