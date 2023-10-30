@@ -1,77 +1,80 @@
-/*
- * Recupera todos os elementos necessários 
- */
-const cenarioElement = document.querySelector('#cenario');
-const alvoElement = document.querySelector('#alvo');
-const acertosElement = document.querySelector('#acertos');
-const errosElement = document.querySelector('#erros');
-const totalElement = document.querySelector('#total');
-const btnIniciar = document.querySelector('#controles_btn-iniciar');
-const tempoElement = document.querySelector("#tempo");
+$(document).ready(function () {
 
-/*
- * Variáveis para controlar os status
- */
-let acertos = 0;
-let erros = 0;
-let total = 0;
-let interval = 0;
+    const elementoCenario = $('#cenario');
+    const elementoAlvo = $('#alvo');
+    const elementoQtdqtdAcertos = $('#qtdAcertos');
+    const elementoQtdqtdErros = $('#qtdErros');
+    const elementoQtdTiros = $('#qtdTiros');
+    const elementoBtnIniciar = $('#controles_btn-iniciar');
+    const elementoTempo = $('#tempo');
 
-btnIniciar.addEventListener("click", iniciarJogo);
+    let qtdAcertos = 0;
+    let qtdErros = 0;
+    let qtdTiros = 0;
+    let intervaloChecagemTempo = 0;
 
-function iniciarJogo() {
-    btnIniciar.setAttribute("disabled", "true");
+    elementoBtnIniciar.on("click", iniciarJogo);
 
-    cenarioElement.addEventListener("click", ouvinteClick);
+    function iniciarJogo() {
+        elementoBtnIniciar.attr("disabled", true);
 
-    interval = setInterval(() => {
-        let valTempo = tempoElement.innerHTML;
-        --valTempo;
-        tempoElement.innerHTML = valTempo;
-    }, 1000);
-    setTimeout(pararJogo, 15000);
-}
+        elementoCenario.on("click", ouvinteCliqueMouse);
 
-function pararJogo() {
-    clearInterval(interval);
-    cenarioElement.removeEventListener("click", ouvinteClick);
-}
+        intervaloChecagemTempo = setInterval(function () {
+            let tempo = parseInt(elementoTempo.text());
+            tempo--;
+            elementoTempo.text(tempo);
+        }, 1000);
 
-function ouvinteClick(MouseEvent) {
-    let mouseX = MouseEvent.clientX;
-    let mouseY = MouseEvent.clientY;
-    let alvoRect = alvoElement.getBoundingClientRect();
-
-    if (mouseX >= alvoRect.left && mouseX <= alvoRect.right && mouseY >= alvoRect.top && mouseY <= alvoRect.bottom) {
-        atualizarPlacar(true);
-        atualizarPlacar(true);
-        alterarPosicaoAlvo();
+        setTimeout(pararJogo, 15000);
     }
-    else {
-        atualizarPlacar(false);
-        atualizarPlacar(false);
-    }
-}
 
-function alterarPosicaoAlvo() {
-    const cWidth = cenarioElement.offsetWidth;
-    const cHeight = cenarioElement.offsetHeight;
-
-    const aWidth = alvoElement.offsetWidth;
-    const aHeight = alvoElement.offsetHeight;
-    alvoElement.style.left = Math.floor(Math.random() * (cWidth - aWidth)) + 'px';
-    alvoElement.style.top = Math.floor(Math.random() * (cHeight - aHeight)) + 'px';
-};
-
-function atualizarPlacar(acertou) {
-    total++;
-    totalElement.innerHTML = total;
-    if (acertou == true) {
-        acertos++;
-        acertosElement.innerHTML = acertos;
+    function pararJogo() {
+        clearInterval(intervaloChecagemTempo);
+        elementoCenario.off("click", ouvinteCliqueMouse);
+        elementoBtnIniciar.removeAttr("disabled");
     }
-    else {
-        erros++;
-        errosElement.innerHTML = erros;
+
+    function ouvinteCliqueMouse(event) {
+        let mouseX = event.clientX;
+        let mouseY = event.clientY;
+        let alvoRect = elementoAlvo[0].getBoundingClientRect();
+
+        if (mouseX >= alvoRect.left &&
+            mouseX <= alvoRect.right &&
+            mouseY >= alvoRect.top &&
+            mouseY <= alvoRect.bottom) {
+            atualizarPlacar(true);
+            alterarPosicaoAlvo();
+        }
+        else {
+            atualizarPlacar(false);
+        }
     }
-};
+
+    function alterarPosicaoAlvo() {
+        const cWidth = elementoCenario.width();
+        const cHeight = elementoCenario.height();
+
+        const aWidth = elementoAlvo.width();
+        const aHeight = elementoAlvo.height();
+
+        elementoAlvo.css("left", Math.floor(Math.random() * (cWidth - aWidth)) + 'px');
+        elementoAlvo.css("top", Math.floor(Math.random() * (cHeight - aHeight)) + 'px');
+    }
+
+    function atualizarPlacar(acertou) {
+        qtdTiros++;
+        elementoQtdTiros.text(qtdTiros);
+
+        if (acertou) {
+            qtdAcertos++;
+            elementoQtdqtdAcertos.text(qtdAcertos);
+        }
+        else {
+            qtdErros++;
+            elementoQtdqtdErros.text(qtdErros);
+        }
+    }
+
+});
