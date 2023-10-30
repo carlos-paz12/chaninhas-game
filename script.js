@@ -32,7 +32,6 @@ $(document).ready(function () {
     function pararJogo() {
         clearInterval(intervaloChecagemTempo);
         elementoCenario.off("click", ouvinteCliqueMouse);
-        elementoBtnIniciar.removeAttr("disabled");
     }
 
     function ouvinteCliqueMouse(event) {
