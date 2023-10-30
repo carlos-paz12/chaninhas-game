@@ -7,6 +7,7 @@ $(document).ready(function () {
     const elementoQtdTiros = $('#total');
     const elementoBtnIniciar = $('#btn-iniciar');
     const elementoTempo = $('#tempo');
+    let miado = new Audio("assets/audio/miado.mp3");
 
     let qtdAcertos = 0;
     let qtdErros = 0;
@@ -46,6 +47,7 @@ $(document).ready(function () {
             mouseY <= alvoRect.bottom) {
             atualizarPlacar(true);
             alterarPosicaoAlvo();
+            miado.play();
         }
         else {
             atualizarPlacar(false);
