@@ -2,9 +2,9 @@ $(document).ready(function () {
 
     const elementoCenario = $('#cenario');
     const elementoAlvo = $('#alvo');
-    const elementoQtdqtdAcertos = $('#qtdAcertos');
-    const elementoQtdqtdErros = $('#qtdErros');
-    const elementoQtdTiros = $('#qtdTiros');
+    const elementoQtdAcertos = $('#acertos');
+    const elementoQtdErros = $('#erros');
+    const elementoQtdTiros = $('#total');
     const elementoBtnIniciar = $('#controles_btn-iniciar');
     const elementoTempo = $('#tempo');
 
@@ -69,11 +69,11 @@ $(document).ready(function () {
 
         if (acertou) {
             qtdAcertos++;
-            elementoQtdqtdAcertos.text(qtdAcertos);
+            elementoQtdAcertos.text(qtdAcertos);
         }
         else {
             qtdErros++;
-            elementoQtdqtdErros.text(qtdErros);
+            elementoQtdErros.text(qtdErros);
         }
     }
 
