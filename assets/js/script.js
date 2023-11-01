@@ -10,13 +10,14 @@ $(document).ready(function () {
     const elementoBtnRanking = $('#botoes_botao-ranking');
 
     let miado = new Audio("assets/audio/miado.mp3");
+    let tema = new Audio("assets/audio/tema.mp3")
 
     let acertos = 0;
     let erros = 0;
     let tentativas = 0;
     let acertou = false;
 
-    let tempoDecorrido = 20;
+    let tempoDecorrido = 30;
     let tempoTotal = tempoDecorrido * 1000;
     let checagemTempoDecorrido = 0;
     let cronometroTempoTotal = 0;
@@ -24,6 +25,8 @@ $(document).ready(function () {
     elementoBtnIniciar.on("click", iniciarPartida);
 
     function iniciarPartida() {
+        tema.play();
+
         elementoBtnIniciar.attr("disabled", true);
         elementoBtnRanking.attr("disabled", true);
 
@@ -60,6 +63,8 @@ $(document).ready(function () {
     }
 
     function pararPartida() {
+        tema.pause();
+
         elementoCenario.off("click", ouvinteCliqueMouse);
 
         clearInterval(checagemTempoDecorrido);

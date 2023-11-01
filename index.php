@@ -20,7 +20,7 @@
         <ul id="jogo_placar">
             <li class="placar_status">
                 <span class="material-symbols-outlined" id="status_icon-tempo">schedule</span>
-                <span id="status_tempo" class="status_valor">20</span>
+                <span id="status_tempo" class="status_valor">30</span>
             </li>
 
             <li class="placar_status">
